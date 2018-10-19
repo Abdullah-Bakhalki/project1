@@ -59,8 +59,8 @@ def normalise_input(user_input):
     'help'
     """
     norm = user_input
-    norm = remove_spaces(norm)
     norm = remove_punct(norm)
+    norm = norm.strip()
     norm = norm.lower()
     return norm
 
@@ -85,7 +85,7 @@ def display_room(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
     """
     print()
-    print(room['name'])
+    print(room["name"].upper())
     print()
     print(room["description"])
     print()
@@ -122,7 +122,7 @@ def print_menu_line(direction, leads_to):
     Go SOUTH to MJ and Simon's room.
     """
     "menu_line =  + dierection.upper() +  to  + leads_to"
-    print("GO " + direction.upper() + " to " + leads_to + ".")
+    print("Go " + direction.upper() + " to " + leads_to + ".")
 
 
 def print_menu(exits):
