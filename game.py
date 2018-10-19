@@ -85,7 +85,7 @@ def display_room(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
     """
     print()
-    print(room["name"].upper())
+    print(room['name'])
     print()
     print(room["description"])
     print()
@@ -216,7 +216,7 @@ def move(exits, direction):
     """
     if is_valid_exit(exits, direction):
         room = exits[direction]
-        return rooms["parking"]
+        return rooms[room]
 
 
 # This is the entry point of our program
